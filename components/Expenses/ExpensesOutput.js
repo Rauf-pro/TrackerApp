@@ -1,12 +1,12 @@
-import { FlatList, Text, View } from "react-native";
+import { View } from "react-native";
 import ExpensesList from "./ExpensesList";
 import ExpensesSummary from "./ExpensesSymmary";
 
-function ExpensesOutput({ expenses }) {
+function ExpensesOutput({ expenses, expensesPeriod }) {
   return (
     <View>
-      <ExpensesSummary/>
-      <ExpensesList/>
+      <ExpensesSummary expenses ={expenses} periodName={expensesPeriod}/>
+      <ExpensesList />
     </View>
   );
 }
